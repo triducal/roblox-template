@@ -1,0 +1,30 @@
+name: Deploy Develop
+
+on:
+  # Enable manual deploys from the GitHub UI
+  workflow_dispatch:
+  # Enable automatic deploys whenever code is pushed to the dev or main branches
+  push:
+    branches:
+      - develop
+
+jobs:
+  build-and-deploy:
+    runs-on: windows-latest
+    steps:
+        # Checkout your Git repo
+      - uses: actions/checkout@v4
+        # Setup Rokit
+      - name: Setup Rokit
+        uses: CompeyDev/setup-rokit@d49be92bd9502180218c3f43e7988faa945217b0 # v0.1.2
+        # Build the project with rojo
+      - name: Build project
+        run: rojo build --output place.rbxlx
+        # Deploy the project with mantle
+      - name: Deploy project
+        run: mantle deploy mantle.yaml --environment development
+        env:
+          ROBLOSECURITY: ${{ secrets.ROBLOSECURITY }}
+          MANTLE_OPEN_CLOUD_API_KEY: ${{ secrets.MANTLE_OPEN_CLOUD_API_KEY }}
+          MANTLE_AWS_ACCESS_KEY_ID: ${{ secrets.MANTLE_AWS_ACCESS_KEY_ID }}
+          MANTLE_AWS_SECRET_ACCESS_KEY: ${{ secrets.MANTLE_AWS_SECRET_ACCESS_KEY }}

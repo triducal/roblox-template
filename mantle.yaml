@@ -1,0 +1,61 @@
+owner:
+  group: 17094156
+
+state:
+  remote:
+    region: us-east-2
+    bucket: triducal-mantle-states
+    key: project-template
+
+environments:
+  - label: development
+    branches:
+      - develop
+    targetNamePrefix: environmentLabel
+    targetAccess: private
+    targetOverrides:
+      icon: assets/marketing/icon.png
+
+  - label: production
+    branches:
+      - main
+    targetAccess: public
+
+target:
+  experience:
+    icon: assets/marketing/icon.png
+    configuration:
+      playableDevices: [computer, console, phone, tablet]
+      privateServers:
+        price: 0
+      enableStudioAccessToApis: true
+      avatarType: playerChoice
+      avatarAnimationType: playerChoice
+    spatialVoice:
+      enabled: true
+    places:
+      start:
+        file: place.rbxlx
+        configuration:
+          name: Roblox Project Template
+          description: A project template for Roblox projects.
+          maxPlayerCount: 25
+          allowCopying: false
+    badges:
+      1-example:
+        name: Welcome Example Badge
+        description: This is an example badge.
+        icon: assets/marketing/icon.png
+        enabled: true
+    products:
+      1-example:
+        name: Example Product
+        description: This is an example product.
+        price: 5
+        icon: assets/marketing/icon.png
+    passes:
+      1-example:
+        name: Example Pass
+        description: This is an example pass.
+        price: 5
+        icon: assets/marketing/icon.png
