@@ -10,10 +10,10 @@ function setupLeaderstats(player: Player)
 
 	local coins = Instance.new("NumberValue")
 	coins.Parent = leaderstats
-	coins.Name = "Coins"
+	coins.Name = "💰 Coins"
 
 	local gems = Instance.new("NumberValue")
-	gems.Name = "Gems"
+	gems.Name = "💎 Gems"
 	gems.Parent = leaderstats
 
 	local selector = Selectors.selectPlayerBalance(tostring(player.UserId))

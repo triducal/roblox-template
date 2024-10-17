@@ -2,12 +2,12 @@ local Loader = require("@Packages/Loader")
 local Log = require("@Shared/Log")
 
 local function LoadServices()
-	local Services = script.Parent.controllers
+	local Services = script.Parent.Controllers
 	Loader.SpawnAll(Loader.LoadDescendants(Services, Loader.MatchesName("Controller$")), "Init")
 end
 
 local function InitializeReflex()
-	require("@Server/Store")
+	require("@Client/Store")
 end
 
 local function Start()
