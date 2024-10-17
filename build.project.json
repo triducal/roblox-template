@@ -1,5 +1,5 @@
 {
-    "name": "ProjectTemplate",
+    "name": "RobloxProjectTemplate",
     "emitLegacyScripts": false,
     "tree": {
         "$className": "DataModel",
@@ -8,15 +8,15 @@
                 "$path": "Packages"
             },
             "Client": {
-                "$path": "src/Client"
+                "$path": "dist/Client"
             },
             "Shared": {
-                "$path": "src/Shared"
+                "$path": "dist/Shared"
             }
         },
         "ServerScriptService": {
             "Server": {
-                "$path": "src/Server"
+                "$path": "dist/Server"
             }
         }
     }

@@ -1,0 +1,8 @@
+std = "selene_definitions"
+
+[config]
+global_usage = { ignore_pattern = "^__" }
+
+[rules]
+global_usage = "allow"
+mixed_table = "allow"
