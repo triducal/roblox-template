@@ -6,3 +6,9 @@ realm = "shared"
 
 [dependencies]
 Loader = "sleitnick/loader@2.0.0"
+Reflex = "littensy/reflex@4.3.1"
+Remo = "littensy/remo@1.5.0"
+Sift = "csqrl/sift@0.0.9"
+Lapis = "nezuo/lapis@0.3.3"
+Promise = "evaera/promise@4.0.0"
+t = "osyrisrblx/t@3.1.1"
