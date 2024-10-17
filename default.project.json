@@ -18,6 +18,11 @@
             "Server": {
                 "$path": "src/Server"
             }
+        },
+        "Workspace": {
+            "Game": {
+                "$path": "assets/game.rbxm"
+            }
         }
     }
 }

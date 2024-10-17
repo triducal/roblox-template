@@ -1,6 +1,6 @@
 sourcemap.json
 Packages/
-**/*.rbx[lm]*
+**/*.rbxlx
 globalTypes.d.lua
 dist/
 .DS_Store

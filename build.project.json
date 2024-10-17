@@ -18,6 +18,11 @@
             "Server": {
                 "$path": "dist/Server"
             }
+        },
+        "Workspace": {
+            "Game": {
+                "$path": "assets/game.rbxm"
+            }
         }
     }
 }
