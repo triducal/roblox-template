@@ -3,3 +3,4 @@ Packages/
 **/*.rbx[lm]*
 globalTypes.d.lua
 dist/
+.DS_Store
