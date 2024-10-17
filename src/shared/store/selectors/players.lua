@@ -1,6 +1,6 @@
 local Reflex = require("@Packages/Reflex")
-local players = require("@Shared/store/slices/players")
-local slices = require("@Shared/store/slices")
+local players = require("@Shared/Store/slices/players")
+local slices = require("@Shared/Store/slices")
 
 local function selectPlayerBalance(playerId: string)
 	return function(state: slices.SharedState)

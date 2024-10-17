@@ -1,6 +1,6 @@
 local Reflex = require("@Packages/Reflex")
-local remotes = require("@Shared/remotes")
-local slices = require("@Shared/store/slices")
+local remotes = require("@Shared/Remotes")
+local slices = require("@Shared/Store/slices")
 
 local function broadcasterMiddleware()
 	local broadcaster = Reflex.createBroadcaster({

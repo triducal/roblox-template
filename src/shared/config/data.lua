@@ -1,5 +1,5 @@
 local Lapis = require("@Packages/Lapis")
-local Types = require("@Shared/store/slices/players/types")
+local Types = require("@Shared/Store/slices/players/types")
 local t = require("@Packages/t")
 
 local template: Types.PlayerData = {

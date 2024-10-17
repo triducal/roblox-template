@@ -1,7 +1,7 @@
 local Players = game:GetService("Players")
 
-local Selectors = require("@Shared/store/selectors")
-local Store = require("@Server/store")
+local Selectors = require("@Shared/Store/selectors")
+local Store = require("@Server/Store")
 
 function setupLeaderstats(player: Player)
 	local leaderstats = Instance.new("Folder")

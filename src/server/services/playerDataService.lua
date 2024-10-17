@@ -1,12 +1,10 @@
 local Players = game:GetService("Players")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local ServerScriptService = game:GetService("ServerScriptService")
 
 local Lapis = require("@Packages/Lapis")
 local Promise = require("@Packages/Promise")
-local dataConfig = require("@Shared/config/data")
-local selectors = require("@Shared/store/selectors")
-local store = require(ServerScriptService.Server.store)
+local dataConfig = require("@Shared/Config/data")
+local selectors = require("@Shared/Store/selectors")
+local store = require("@Server/Store")
 
 local collection = Lapis.createCollection("data-v1", dataConfig)
 

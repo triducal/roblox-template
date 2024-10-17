@@ -7,7 +7,7 @@ local function LoadServices()
 end
 
 local function InitializeReflex()
-	require("@Server/store")
+	require("@Server/Store")
 end
 
 local function Start()

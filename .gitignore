@@ -2,5 +2,4 @@ sourcemap.json
 Packages/
 **/*.rbx[lm]*
 globalTypes.d.lua
-**/sourcemap.json
 dist/

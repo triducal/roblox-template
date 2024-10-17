@@ -1,5 +1,5 @@
 local Reflex = require("@Packages/Reflex")
-local remotes = require("@Shared/remotes")
+local remotes = require("@Shared/Remotes")
 
 local function receiverMiddleware()
 	local receiver = Reflex.createBroadcastReceiver({
