@@ -19,7 +19,7 @@ jobs:
         uses: CompeyDev/setup-rokit@d49be92bd9502180218c3f43e7988faa945217b0 # v0.1.2
         # Build the project with rojo
       - name: Build project
-        run: rojo build --output place.rbxlx
+        run: sh scripts/build-prod.sh
         # Deploy the project with mantle
       - name: Deploy project
         run: mantle deploy mantle.yaml --environment production
