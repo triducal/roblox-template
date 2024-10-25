@@ -18,8 +18,7 @@ function setupLeaderstats(player: Player)
 
 	local selector = Selectors.selectPlayerBalance(tostring(player.UserId))
 	local unsubscribe = Store:subscribe(selector, function(balance)
-		coins.Value = balance.coins or 0
-		gems.Value = balance.gems or 0
+		--pa
 	end)
 	Players.PlayerRemoving:Connect(function(leavingPlayer: Player)
 		if leavingPlayer == player then

@@ -3,6 +3,11 @@
 registry = "test"
 
 [[package]]
+name = "centau/vide"
+version = "0.3.1"
+dependencies = []
+
+[[package]]
 name = "csqrl/sift"
 version = "0.0.9"
 dependencies = []
@@ -13,14 +18,29 @@ version = "4.0.0"
 dependencies = []
 
 [[package]]
-name = "littensy/reflex"
-version = "4.3.1"
-dependencies = [["Promise", "evaera/promise@4.0.0"]]
+name = "littensy/charm"
+version = "0.8.0"
+dependencies = []
+
+[[package]]
+name = "littensy/charm-sync"
+version = "0.1.0"
+dependencies = [["Charm", "littensy/charm@0.8.0"]]
 
 [[package]]
 name = "littensy/remo"
 version = "1.5.0"
 dependencies = [["Promise", "evaera/promise@4.0.0"]]
+
+[[package]]
+name = "littensy/ripple"
+version = "0.9.1"
+dependencies = [["Promise", "evaera/promise@4.0.0"]]
+
+[[package]]
+name = "littensy/vide-charm"
+version = "0.1.0"
+dependencies = [["Charm", "littensy/charm@0.8.0"], ["Vide", "centau/vide@0.3.1"]]
 
 [[package]]
 name = "nezuo/lapis"
@@ -40,4 +60,4 @@ dependencies = []
 [[package]]
 name = "triducal/roblox-template"
 version = "0.1.0"
-dependencies = [["Lapis", "nezuo/lapis@0.3.3"], ["Loader", "sleitnick/loader@2.0.0"], ["Promise", "evaera/promise@4.0.0"], ["Reflex", "littensy/reflex@4.3.1"], ["Remo", "littensy/remo@1.5.0"], ["Sift", "csqrl/sift@0.0.9"], ["t", "osyrisrblx/t@3.1.1"]]
+dependencies = [["Charm", "littensy/charm@0.8.0"], ["CharmSync", "littensy/charm-sync@0.1.0"], ["CharmVide", "littensy/vide-charm@0.1.0"], ["Lapis", "nezuo/lapis@0.3.3"], ["Loader", "sleitnick/loader@2.0.0"], ["Promise", "evaera/promise@4.0.0"], ["Remo", "littensy/remo@1.5.0"], ["Ripple", "littensy/ripple@0.9.1"], ["Sift", "csqrl/sift@0.0.9"], ["Vide", "centau/vide@0.3.1"], ["t", "osyrisrblx/t@3.1.1"]]

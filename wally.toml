@@ -5,10 +5,14 @@ registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
-Loader = "sleitnick/loader@2.0.0"
-Reflex = "littensy/reflex@4.3.1"
-Remo = "littensy/remo@1.5.0"
-Sift = "csqrl/sift@0.0.9"
-Lapis = "nezuo/lapis@0.3.3"
-Promise = "evaera/promise@4.0.0"
-t = "osyrisrblx/t@3.1.1"
+Loader = "sleitnick/loader@2.0.0" # Module Loader For Services/Controllers
+Charm = "littensy/charm@0.8.0" # State Management
+CharmSync = "littensy/charm-sync@0.1.0" # Server-Client Sync
+CharmVide = "littensy/vide-charm@0.1.0" # Vide Hooks
+Remo = "littensy/remo@1.5.0" # Typed Remotes
+Ripple = "littensy/ripple@0.9.1" # Motion Library
+Sift = "csqrl/sift@0.0.9" # Immutable Data Manipulation
+Vide = "centau/vide@0.3.1" # UI Library
+Lapis = "nezuo/lapis@0.3.3" # Datastore Library
+Promise = "evaera/promise@4.0.0" # Promise
+t = "osyrisrblx/t@3.1.1" # Runtime type-checking

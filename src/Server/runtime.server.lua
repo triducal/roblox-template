@@ -6,12 +6,7 @@ local function LoadServices()
 	Loader.SpawnAll(Loader.LoadDescendants(Services, Loader.MatchesName("Service$")), "Init")
 end
 
-local function InitializeReflex()
-	require("@Server/Store")
-end
-
 local function Start()
-	InitializeReflex()
 	LoadServices()
 	Log.info("Server initialized")
 end
