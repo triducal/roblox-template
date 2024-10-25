@@ -1,39 +1,36 @@
 local Players = game:GetService("Players")
 
-local Selectors = require("@Shared/Store/selectors")
-local Store = require("@Server/Store")
+local Charm = require("@Packages/Charm")
+local Datastore = require("@Shared/Store")
 
-function setupLeaderstats(player: Player)
-	local leaderstats = Instance.new("Folder")
-	leaderstats.Name = "leaderstats"
-	leaderstats.Parent = player
+local LeaderstatsService = {}
 
-	local coins = Instance.new("NumberValue")
-	coins.Parent = leaderstats
-	coins.Name = "💰 Coins"
+function LeaderstatsService:Init()
+	Charm.observe(Datastore.datastore.players, function(_, name)
+		local player = Players:FindFirstChild(name)
 
-	local gems = Instance.new("NumberValue")
-	gems.Name = "💎 Gems"
-	gems.Parent = leaderstats
-
-	local selector = Selectors.selectPlayerBalance(tostring(player.UserId))
-	local unsubscribe = Store:subscribe(selector, function(balance)
-		--pa
-	end)
-	Players.PlayerRemoving:Connect(function(leavingPlayer: Player)
-		if leavingPlayer == player then
-			unsubscribe()
+		if not player then
+			return
 		end
+
+		local leaderstats = Instance.new("Folder")
+
+		leaderstats.Name = "leaderstats"
+		leaderstats.Parent = player
+
+		local cash = Instance.new("IntValue")
+
+		cash.Name = "💸 Cash"
+		cash.Parent = leaderstats
+
+		local unsubscribe = Charm.effect(function()
+			local data = Datastore.getPlayerData(name)
+
+			cash.Value = data and data.Cash or 0
+		end)
+
+		return unsubscribe
 	end)
 end
 
-local LeaderstatService = {}
-
-function LeaderstatService:Init()
-	Players.PlayerAdded:Connect(setupLeaderstats)
-	for _, player in Players:GetPlayers() do
-		setupLeaderstats(player)
-	end
-end
-
-return LeaderstatService
+return LeaderstatsService
