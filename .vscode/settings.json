@@ -11,5 +11,7 @@
         "@Shared": "src/Shared/",
         "@Server": "src/Server/",
         "@Services": "src/Server/Services/",
+        "@Components": "src/Client/App/Components/",
+        "@Hooks": "src/Client/App/Hooks/"
     }
 }

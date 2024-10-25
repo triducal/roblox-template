@@ -15,7 +15,9 @@
                     "@Controllers": "src/Client/Controllers/",
                     "@Shared": "src/Shared/",
                     "@Server": "src/Server/",
-                    "@Services": "src/Server/Services/"
+                    "@Services": "src/Server/Services/",
+                    "@Components": "src/Client/App/Components/",
+                    "@Hooks": "src/Client/App/Hooks/"
                 }
             },
             "target": {

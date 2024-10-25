@@ -4,6 +4,7 @@ indent_type = "Tabs"
 indent_width = 4
 quote_style = "AutoPreferDouble"
 collapse_simple_statement = "Never"
+call_parentheses = "Input"
 
 [sort_requires]
 enabled = true
