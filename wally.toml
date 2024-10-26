@@ -14,5 +14,6 @@ Ripple = "littensy/ripple@0.9.1" # Motion Library
 Sift = "csqrl/sift@0.0.9" # Immutable Data Manipulation
 Vide = "centau/vide@0.3.1" # UI Library
 Lapis = "nezuo/lapis@0.3.3" # Datastore Library
+MockDataStore = "buildthomas/mockdatastoreservice@1.0.3" # Mock Datastore For Testing
 Promise = "evaera/promise@4.0.0" # Promise
 t = "osyrisrblx/t@3.1.1" # Runtime type-checking

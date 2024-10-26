@@ -1,4 +1,6 @@
+local DataStoreService = game:GetService("DataStoreService")
 local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
 
 local DataConfig = require("@Shared/Config/data")
 local Datastore = require("@Shared/Store")
@@ -6,8 +8,13 @@ local Log = require("@Shared/Log")
 
 local Charm = require("@Packages/Charm")
 local Lapis = require("@Packages/Lapis")
+local MockDataStore = require("@Packages/MockDataStore")
 local Promise = require("@Packages/Promise")
 local t = require("@Packages/t")
+
+Lapis.setConfig({
+	dataStoreService = RunService:IsStudio() and MockDataStore or DataStoreService,
+})
 
 local collection = Lapis.createCollection(DataConfig.StoreKey, {
 	defaultData = DataConfig.DefaultData,
@@ -52,7 +59,9 @@ local function onPlayerAdded(player: Player)
 			syncToCharm(player, document)
 		end)
 		:catch(function(message)
-			warn(`Player {player.Name}'s data failed to load: {message}`)
+			if not RunService:IsStudio() then
+				warn(`Player {player.Name}'s data failed to load: {message}`)
+			end
 
 			Datastore.setPlayerData(player.Name, DataConfig.DefaultData)
 		end)

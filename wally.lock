@@ -3,6 +3,11 @@
 registry = "test"
 
 [[package]]
+name = "buildthomas/mockdatastoreservice"
+version = "1.0.3"
+dependencies = []
+
+[[package]]
 name = "centau/vide"
 version = "0.3.1"
 dependencies = []
@@ -60,4 +65,4 @@ dependencies = []
 [[package]]
 name = "triducal/roblox-template"
 version = "0.1.0"
-dependencies = [["Charm", "littensy/charm@0.8.0"], ["CharmSync", "littensy/charm-sync@0.1.0"], ["CharmVide", "littensy/vide-charm@0.1.0"], ["Lapis", "nezuo/lapis@0.3.3"], ["Loader", "sleitnick/loader@2.0.0"], ["Promise", "evaera/promise@4.0.0"], ["Remo", "littensy/remo@1.5.0"], ["Ripple", "littensy/ripple@0.9.1"], ["Sift", "csqrl/sift@0.0.9"], ["Vide", "centau/vide@0.3.1"], ["t", "osyrisrblx/t@3.1.1"]]
+dependencies = [["Charm", "littensy/charm@0.8.0"], ["CharmSync", "littensy/charm-sync@0.1.0"], ["CharmVide", "littensy/vide-charm@0.1.0"], ["Lapis", "nezuo/lapis@0.3.3"], ["Loader", "sleitnick/loader@2.0.0"], ["MockDataStore", "buildthomas/mockdatastoreservice@1.0.3"], ["Promise", "evaera/promise@4.0.0"], ["Remo", "littensy/remo@1.5.0"], ["Ripple", "littensy/ripple@0.9.1"], ["Sift", "csqrl/sift@0.0.9"], ["Vide", "centau/vide@0.3.1"], ["t", "osyrisrblx/t@3.1.1"]]
