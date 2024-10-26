@@ -23,14 +23,14 @@ local collection = Lapis.createCollection(DataConfig.StoreKey, {
 
 local function syncToCharm(player: Player, document: Lapis.Document<Datastore.PlayerData>)
 	local unsubscribe = Charm.effect(function()
-		local data = Datastore.getPlayerData(player.Name)
+		local data = Datastore.players.getPlayerData(player.Name)
 
 		if data then
 			document:write(data)
 		end
 	end)
 
-	Datastore.setPlayerData(player.Name, document:read())
+	Datastore.players.setPlayerData(player.Name, document:read())
 
 	Log.info(`Synced {player.Name}'s data to Charm.`)
 
@@ -63,12 +63,12 @@ local function onPlayerAdded(player: Player)
 				warn(`Player {player.Name}'s data failed to load: {message}`)
 			end
 
-			Datastore.setPlayerData(player.Name, DataConfig.DefaultData)
+			Datastore.players.setPlayerData(player.Name, DataConfig.DefaultData)
 		end)
 end
 
 local function onPlayerRemoving(player: Player)
-	Datastore.deletePlayerData(player.Name)
+	Datastore.players.deletePlayerData(player.Name)
 end
 
 local DataService = {}

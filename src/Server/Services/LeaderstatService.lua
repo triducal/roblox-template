@@ -24,7 +24,7 @@ function LeaderstatsService:Init()
 		cash.Parent = leaderstats
 
 		local unsubscribe = Charm.effect(function()
-			local data = Datastore.getPlayerData(name)
+			local data = Datastore.players.getPlayerData(name)
 
 			cash.Value = data and data.Cash or 0
 		end)

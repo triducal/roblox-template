@@ -9,28 +9,31 @@ local datastore = {
 	players = Charm.atom({}) :: Charm.Atom<{ [string]: PlayerData }>,
 }
 
-local Store = { datastore = datastore }
+local Players = {}
 
-function Store.getPlayerData(id: string)
+function Players.getPlayerData(id: string)
 	return datastore.players()[id]
 end
 
-function Store.setPlayerData(id: string, data: PlayerData)
+function Players.setPlayerData(id: string, data: PlayerData)
 	datastore.players(function(state)
 		return Sift.Dictionary.set(state, id, data)
 	end)
 end
 
-function Store.deletePlayerData(id: string)
+function Players.deletePlayerData(id: string)
 	datastore.players(function(state)
 		return Sift.Dictionary.removeKey(state, id)
 	end)
 end
 
-function Store.updatePlayerData(id: string, updater: (PlayerData) -> PlayerData)
+function Players.updatePlayerData(id: string, updater: (PlayerData) -> PlayerData)
 	datastore.players(function(state)
 		return Sift.Dictionary.update(state, id, updater)
 	end)
 end
 
-return Store
+return {
+	datastore = datastore,
+	players = Players,
+}
