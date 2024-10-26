@@ -20,6 +20,7 @@
             }
         },
         "Workspace": {
+            "$ignoreUnknownInstances": false,
             "Game": {
                 "$path": "assets/game.rbxm"
             }
